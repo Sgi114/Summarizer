@@ -1,0 +1,25 @@
+{
+    "name": "Abstract Bot",
+    "version": "1.0",
+    "description": "This is my extension.",
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "manifest_version": 2,
+    "permissions": [
+        "tabs",
+        "activeTab"
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.google.com/*"],
+            "js": ["content.js"]
+        }
+    ]
+}
