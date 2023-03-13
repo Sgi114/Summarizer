@@ -4,9 +4,9 @@
     "description": "Webページの要約を表示するChrome拡張機能",
     "version": "1.0",
     "icons": {
-      "16": "icons/cute_Clione.png",
-      "48": "icons/loose_Octopus.png",
-      "128": "icons/basking_penguin.png"
+      "16": "icons\cute_Clione.png",
+      "48": "icons\loose_Octopus.png",
+      "128": "icons\basking_penguin.png"
     },
     "permissions": [
       "https://api.openai.com/*"
@@ -14,7 +14,7 @@
     "content_scripts": [
       {
         "matches": ["<all_urls>"],
-        "js": ["Summarizer.js"]
+        "js": ["abstact-bot\Summarizer.js"]
       }
     ]
   }

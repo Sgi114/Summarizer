@@ -1,7 +1,7 @@
 // ChatGPT APIのエンドポイントURL
 const API_URL = "https://api.openai.com/v1/engines/davinci-codex/completions";
 // ChatGPT APIの認証トークン
-const API_KEY = "<your_api_key_here>";
+const API_KEY = "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";
 
 
 // ページをロードした時に実行される関数
