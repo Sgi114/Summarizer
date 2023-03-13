@@ -5,8 +5,8 @@
     "version": "1.0",
     "icons": {
       "16": "cute_Clione.png",
-      "48": "basking_penguin.png",
-      "128": "loose_Octopus.png"
+      "48": "loose_Octopus.png",
+      "128": "basking_penguin.png"
     },
     "permissions": [
       "https://api.openai.com/*"
