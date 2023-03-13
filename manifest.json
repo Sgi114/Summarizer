@@ -4,9 +4,9 @@
     "description": "Webページの要約を表示するChrome拡張機能",
     "version": "1.0",
     "icons": {
-      "16": "かわいいクリオネ.png",
-      "48": "日向ぼっこなペンギンさん.png",
-      "128": "ゆるいタコさん.png"
+      "16": "cute_Clione.png",
+      "48": "basking_penguin.png",
+      "128": "loose_Octopus.png"
     },
     "permissions": [
       "https://api.openai.com/*"
