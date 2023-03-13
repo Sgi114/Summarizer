@@ -1,17 +1,20 @@
 {
-    "name": "Abstarctor",
+    "manifest_version": 1,
+    "name": "Summarizer",
+    "description": "Webページの要約を表示するChrome拡張機能",
     "version": "1.0",
-    "manifest_version": 2,
-    "description": "Webページの内容を要約するツールです。",
-    "browser_action": {
-      "default_title": "Webページ要約ツール",
-      "default_icon": "icon.png"
+    "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
     },
-    "permissions": ["activeTab", "http://*/*", "https://*/*"],
+    "permissions": [
+      "https://api.openai.com/*"
+    ],
     "content_scripts": [
       {
-        "matches": ["http://*/*", "https://*/*"],
-        "js": ["content_script.js"]
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
       }
     ]
   }
