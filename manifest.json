@@ -1,12 +1,12 @@
 {
-    "manifest_version": 1,
+    "manifest_version": 2,
     "name": "Summarizer",
     "description": "Webページの要約を表示するChrome拡張機能",
     "version": "1.0",
     "icons": {
-      "16": "icon16.png",
-      "48": "icon48.png",
-      "128": "icon128.png"
+      "16": "かわいいクリオネ.png",
+      "48": "日向ぼっこなペンギンさん.png",
+      "128": "ゆるいタコさん.png"
     },
     "permissions": [
       "https://api.openai.com/*"
