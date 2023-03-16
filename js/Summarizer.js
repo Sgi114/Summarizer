@@ -28,18 +28,21 @@ window.onload = function () {
     .then(response => response.json())
     .then(data => {
       // APIから受け取った要約を四角枠に表示する
-      const summary = data.choices[0].text.trim();
-      const rectangle = document.createElement("div");
-      rectangle.style.position = "fixed";
-      rectangle.style.top = "0";
-      rectangle.style.left = "0";
-      rectangle.style.width = "100%";
-      rectangle.style.height = "50px";
-      rectangle.style.backgroundColor = "#fff";
-      rectangle.style.border = "1px solid #000";
-      rectangle.style.padding = "10px";
-      rectangle.innerHTML = `<strong>Webページの要約:</strong> ${summary}`;
-      document.body.appendChild(rectangle);
-    })
-    .catch(error => console.error(error));
+      if (data.choices) {
+        const summary = data.choices[0].text.trim();
+        const rectangle = document.createElement("div");
+        rectangle.style.position = "fixed";
+        rectangle.style.top = "0";
+        rectangle.style.left = "0";
+        rectangle.style.width = "100%";
+        rectangle.style.height = "50px";
+        rectangle.style.backgroundColor = "#fff";
+        rectangle.style.border = "1px solid #000";
+        rectangle.style.padding = "10px";
+        rectangle.innerHTML = `<strong>Webページの要約:</strong> ${summary}`;
+        document.body.appendChild(rectangle);
+    } else 
+    console.error("APIから要約を受け取れませんでした。");
+  });
+    
 };
