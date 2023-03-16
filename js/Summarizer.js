@@ -10,7 +10,7 @@ window.onload = function () {
   const url = window.location.href;
   // APIに送信するデータを準備する
   const data = {
-    "prompt": 'summarize the webpage at `${url}` and translate it into Japanese. +\nOnly Japanese is output.',
+    "prompt": `summarize the webpage at ${url} and translate it into Japanese. +\nOnly Japanese is output.`,
     "temperature": 0.7,
     "max_tokens": 100,
     "n": 1,
