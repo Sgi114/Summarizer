@@ -8,7 +8,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
-const API_KEY = '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';
+require('dotenv').config()
+const { OPENAI_API_KEY } = process.env
+
 
 app.get('/', (req, res) => {
     res.send('こんにちは、佳祐ｸﾝ！');
@@ -56,7 +58,7 @@ async function getChatGPT(apiKey, message) {
 app.post('/api/summarize', async (req, res) => {
     // クエリパラメータ取得：https://nodejs.keicode.com/nodejs/express-params-query.php
     const prompt = `summarize the webpage at ${req.query.url} and translate it into Japanese. +\nOnly Japanese is output.`
-    const message = await getChatGPT(API_KEY, prompt)
+    const message = await getChatGPT(OPENAI_API_KEY, prompt)
     res.json({ message });
 });
 
